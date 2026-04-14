@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "dev": "ts-node-dev --respawn src/index.ts",
+    "dev": "ts-node-dev --respawn src/server.ts",
     "simulate": "ts-node src/simulation.ts",
     "server": "ts-node src/server.ts",
     "audiosocket": "ts-node src/audiosocket-server.ts",
