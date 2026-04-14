@@ -8,9 +8,9 @@ services:
       - key: PORT
         value: 3001
       - key: OPENAI_API_KEY
-        sync: true
+        value: ""
       - key: PUBLIC_BASE_URL
-        sync: true
+        value: ""
       - key: REDIS_URL
         fromService:
           type: redis
