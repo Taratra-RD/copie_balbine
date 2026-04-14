@@ -1,23 +1,12 @@
 services:
   - type: web
     name: balbine-voice-agent
+    plan: free
     runtime: node
     buildCommand: npm install && npm run build
     startCommand: node dist/server.js
     envVars:
-      - key: PORT
-        value: 3001
       - key: OPENAI_API_KEY
         value: ""
       - key: PUBLIC_BASE_URL
         value: ""
-      - key: REDIS_URL
-        fromService:
-          type: redis
-          name: balbine-redis
-          property: connectionString
-
-  - type: redis
-    name: balbine-redis
-    ipAllowList: [] # Only allow internal connections
-    plan: free # Use the free plan for Redis
