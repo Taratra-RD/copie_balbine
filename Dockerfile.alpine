@@ -1,0 +1,12 @@
+FROM alpine:latest
+
+RUN apk add --no-cache \
+    asterisk \
+    asterisk-pjsip \
+    && rm -rf /var/cache/apk/*
+
+RUN mkdir -p /var/lib/asterisk /var/log/asterisk
+
+EXPOSE 5060/udp 5060/tcp 5000/tcp 10000-10100/udp
+
+CMD ["asterisk", "-f", "-vvv"]

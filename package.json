@@ -1,0 +1,43 @@
+{
+  "name": "dev",
+  "version": "1.0.0",
+  "description": "AI Voice Agent - Module 1 (clean setup)",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "simulate": "ts-node src/simulation.ts",
+    "server": "ts-node src/server.ts",
+    "audiosocket": "ts-node src/audiosocket-server.ts",
+    "sip:uas": "ts-node src/sip-uas.ts",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "dotenv": "^16.0.0",
+    "drachtio-srf": "^5.0.20",
+    "express": "^4.22.1",
+    "mic": "^2.1.2",
+    "mysql2": "^3.0.0",
+    "openai": "^4.0.0",
+    "redis": "^4.0.0",
+    "sip": "^0.0.6",
+    "winston": "^3.9.0",
+    "ws": "^8.19.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.25",
+    "@types/node": "^20.0.0",
+    "@types/ws": "^8.18.1",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.0"
+  }
+}

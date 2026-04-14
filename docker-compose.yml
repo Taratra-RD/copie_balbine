@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  asterisk:
+    build:
+      context: .
+      dockerfile: Dockerfile.alpine
+    container_name: balbine-asterisk
+    restart: unless-stopped
+    ports:
+      - "5060:5060/udp"
+      - "5060:5060/tcp"
+      - "5000:5000/tcp"
+      - "10000-10100:10000-10100/udp"
+    volumes:
+      - ./asterisk/etc:/etc/asterisk
+      - ./asterisk/var:/var/lib/asterisk
+      - ./asterisk/log:/var/log/asterisk
+    networks:
+      - balbine-net
+
+networks:
+  balbine-net:
+    driver: bridge

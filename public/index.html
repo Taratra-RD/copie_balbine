@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Balbine Module 1 – Test micro local</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; }
+    button { font-size: 18px; padding: 12px 24px; margin: 8px; cursor: pointer; }
+    #status { margin-top: 20px; font-weight: bold; }
+    .info { background: #f0f8ff; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Balbine Module 1 – Test micro local</h1>
+  <div class="info">
+    <p>Ce client envoie l’audio du micro vers ton serveur (WebSocket) → OpenAI Realtime → retour audio.</p>
+    <p>Assure-toi que le serveur écoute sur <code>ws://localhost:3001</code>.</p>
+  </div>
+  <button id="start">🎤 Démarrer la conversation</button>
+  <button id="stop" disabled>⏹ Arrêter</button>
+  <div id="status">Cliquez sur Démarrer pour parler.</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
